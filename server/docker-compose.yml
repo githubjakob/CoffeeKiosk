@@ -1,0 +1,10 @@
+version: "3"
+services:
+  server:
+    image: coffeeserver:latest
+    ports:
+      - "8000:8080"
+  mongodb:
+    image: mongo:3.2
+    ports:
+      - "27017:27017"

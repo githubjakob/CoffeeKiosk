@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dip" >
+
+
+    <TextView
+        android:id="@+id/priceOfProduct"
+        android:layout_width="71dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="-200dp"
+        android:layout_toStartOf="@+id/toCartButton"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@id/toCartButton"
+        android:layout_alignBottom="@id/toCartButton"
+        android:text="TextView"
+        android:textSize="16dp"/>
+
+    <Button
+        android:id="@+id/toCartButton"
+        android:layout_width="177dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="200dp"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/nameOfProduct"
+        android:layout_width="125dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@id/toCartButton"
+        android:layout_alignBottom="@id/toCartButton"
+        android:text="TextView"
+        android:textSize="16dp" />
+</RelativeLayout>
+
+

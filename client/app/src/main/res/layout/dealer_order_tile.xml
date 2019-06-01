@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="6dip" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/checkboxLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="10dp"
+            android:text="Als Verkauft markieren"
+            android:textColorHint="@color/colorPrimaryDark" />
+
+        <CheckBox
+            android:id="@+id/markAsSoldCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_below="@+id/checkboxLabel"
+            android:text=""/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/userNameTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:textSize="20dp"
+        android:textColorHint="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:textSize="16dp"
+        android:layout_below="@id/userNameTextView"
+        android:textColorHint="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:textSize="16dp"
+        android:layout_below="@id/statusTextView"
+        android:textColorHint="@color/colorPrimaryDark" />
+
+    <LinearLayout
+        android:id="@+id/orderedProductsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timestamp"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/sumPrice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:textSize="16dp"
+        android:layout_below="@id/orderedProductsList"
+        android:textColorHint="@color/colorPrimaryDark" />
+</RelativeLayout>
+
+

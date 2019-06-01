@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.github.projectblackalert.coffeeclient">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/coffee_cup"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/coffee_cup"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_buy_coffee"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".dealerArea.DealerActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_sell_coffee">
+            <intent-filter>
+                <action android:name="OPEN_DEALER_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- Google Cloud Messaging with Firebase -->
+        <!-- see https://firebase.google.com/docs/cloud-messaging/android/client -->
+        <service android:name=".cloudMessaging.MessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".cloudMessaging.InstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+
+        <activity
+            android:name=".WelcomeActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".popup.PushPopupActivity"
+            android:theme="@style/AppTheme.CustomTheme"
+            ></activity>
+    </application>
+
+</manifest>

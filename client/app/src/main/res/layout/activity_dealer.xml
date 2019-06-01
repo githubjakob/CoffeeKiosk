@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dealerArea.DealerActivity">
+
+
+    <LinearLayout
+        android:id="@+id/settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Switch
+            android:id="@+id/showAllOrdersSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="Verkaufte Bestellungen anzeigen" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/orderedProductsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fcfbfb"
+        android:choiceMode="singleChoice"
+        android:clickable="true"
+        android:focusable="true"
+        android:isScrollContainer="true"
+        android:layout_below="@+id/settings"
+        android:padding="@dimen/fui_button_inset_bottom"/>
+</RelativeLayout>

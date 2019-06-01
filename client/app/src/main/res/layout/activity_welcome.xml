@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".WelcomeActivity">
+
+    <TextView
+        android:id="@+id/headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35dp"
+        android:gravity="center"
+        android:layout_margin="25dp"
+
+        android:text="Bestelle Deinen Kaffee am Kiosk Oettingenstraße 80 und hol' ihn ab, ohne zu warten!" />
+
+    <TextView
+        android:id="@+id/point1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_margin="15dp"
+        android:layout_below="@id/headline"
+        android:layout_centerInParent="true"
+        android:text="Du bezahlst beim Abholen!" />
+
+    <TextView
+        android:id="@+id/point2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/point1"
+        android:text="Wir benachrichtigen Dich, sobald dein Kaffee fertig ist!" />
+
+    <Button
+        android:id="@+id/continueToMainActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/point2"
+        android:layout_centerInParent="true"
+        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffa22d"
+        android:textSize="20dp"
+        android:text="Los geht's!" />
+
+</RelativeLayout>
