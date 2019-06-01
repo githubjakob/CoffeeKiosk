@@ -1,12 +1,17 @@
 # Project-Black-Alert
-An app to manage coffee orders
 
-## Team 
-peijie.liu@campus.lmu.de;
-raffaella90@web.de;
-kathrin.hartmann@campus.lmu.de;
-Simon.Raths@campus.lmu.de
-jakob.zanker@googlemail.com
+This app was created by a team of 5 students during the practical course "Mobile and Distributed Systems" at LMU in summer 2018.
 
-## Protokol
-https://docs.google.com/document/d/1JS3WDJjOsqiTZDfAJ5c9oTDwUWjJZr_BDvH64rqr6sg/edit
+## Idea
+
+In collaboration with the Kiosk next to the Computer Science department, our team created an App that allows students to pre-order coffee.
+The Kiosk owner get's notified through the apps push notifications and is able to inform the student once the coffee is ready.
+
+## Technologies
+
+The project contains
+
+* an Android application
+* a restful Spring backend with a MongoDb
+* integration with Firebase Authentication
+* integration with Google Cloud messaging
