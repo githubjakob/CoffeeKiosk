@@ -38,7 +38,7 @@ public class OrderAdapter extends ArrayAdapter<Order> {
 
     private LinearLayout productList;
 
-    private ProductAdapter productAdapter;
+    private OrderedProductsAdapter productAdapter;
 
     private List<Order> orders;
 
@@ -109,7 +109,7 @@ public class OrderAdapter extends ArrayAdapter<Order> {
     private void setUpProductAdapter(View listItem, Order currentOrder) {
         productList = listItem.findViewById(R.id.orderedProductsList);
         productList.removeAllViews();
-        productAdapter = new ProductAdapter(context, currentOrder.getProducts());
+        productAdapter = new OrderedProductsAdapter(context, currentOrder.getProducts());
 
         int productsInOrder = currentOrder.getProducts().size();
 

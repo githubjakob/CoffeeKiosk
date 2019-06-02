@@ -14,13 +14,13 @@ import java.util.List;
 import io.github.projectblackalert.coffeeclient.R;
 import io.github.projectblackalert.coffeeclient.model.Product;
 
-public class ProductAdapter extends ArrayAdapter<Product> {
+public class AvailableProductsAdapter extends ArrayAdapter<Product> {
 
     List<Product> products;
 
     Context context;
 
-    public ProductAdapter(@NonNull Context context, List<Product> products) {
+    public AvailableProductsAdapter(@NonNull Context context, List<Product> products) {
         super(context, R.layout.product_tile, products);
         this.products = products;
         this.context = context;
@@ -31,14 +31,13 @@ public class ProductAdapter extends ArrayAdapter<Product> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItem = convertView;
         if (listItem == null)
-            listItem = LayoutInflater.from(context).inflate(R.layout.dealer_order_tile_product,parent,false);
+            listItem = LayoutInflater.from(context).inflate(R.layout.fragment_buy_product_tile,parent,false);
 
         final Product currentProduct = products.get(position);
 
         TextView productName = listItem.findViewById(R.id.productName);
-        productName.setText("1x " + currentProduct.getName());
+        productName.setText(currentProduct.getName() + " (" + String.format("%.2f", currentProduct.getPrice()) + " €)");
 
         return listItem;
     }
-
 }

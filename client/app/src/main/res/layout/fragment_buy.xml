@@ -8,51 +8,6 @@
     tools:context=".BuyFragment"
     tools:layout_editor_absoluteY="81dp">
 
-
-    <TextView
-        android:id="@+id/nameOfProductHeader"
-        android:layout_width="98dp"
-        android:layout_height="38dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="15dp"
-        android:gravity="center_vertical"
-        android:text="Produkt"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        android:visibility="invisible" />
-
-    <TextView
-        android:id="@+id/priceOfProductHeader"
-        android:layout_width="96dp"
-        android:layout_height="38dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="135dp"
-        android:gravity="center_vertical"
-        android:text="Preis"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        android:visibility="invisible" />
-
-
-    <LinearLayout
-        android:id="@+id/productsLayout"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_below="@+id/nameOfProductHeader"
-        android:orientation="vertical"></LinearLayout>
-
-    <ImageView
-        android:id="@+id/coffeeView"
-        android:layout_width="256dp"
-        android:layout_height="200dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="19dp"
-        android:src="@drawable/cappuccino" />
-
-
     <ProgressBar
         android:id="@+id/spinner"
         style="?android:attr/progressBarStyle"
@@ -60,6 +15,12 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center" />
+
+    <ListView
+        android:id="@+id/availableProductsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fcfbfb"/>
 
     <Button
         android:id="@+id/buybutten"
@@ -69,93 +30,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="17dp"
         android:layout_marginStart="18dp"
-        android:text="Kaufen"
+        android:text="Bestellen"
         android:visibility="visible" />
-
-    <Button
-        android:id="@+id/cancelbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/buybutten"
-        android:layout_marginEnd="22dp"
-        android:text="Verwerfen" />
-
-
-    <ScrollView
-        android:id="@+id/order_scroll"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="90dp"
-        android:background="@android:color/darker_gray">
-
-        <LinearLayout
-            android:id="@+id/orders"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:orientation="vertical"></LinearLayout>
-    </ScrollView>
-
-    <TextView
-        android:id="@+id/price"
-        android:layout_width="wrap_content"
-        android:layout_height="17dp"
-        android:layout_alignEnd="@+id/spinner"
-        android:layout_alignTop="@+id/buybutten"
-        android:layout_centerHorizontal="true"
-        android:text="0,00 €" />
-
-    <TextView
-        android:id="@+id/coffeeName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/coffeeView"
-        android:layout_centerHorizontal="true"
-        android:text="Cappuccino"
-        android:textSize="22sp" />
-
-    <ImageButton
-        android:id="@+id/nextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="12dp"
-        android:layout_marginTop="90dp"
-        android:background="@null"
-        android:src="@drawable/right_large" />
-
-    <ImageButton
-        android:id="@+id/previousButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="12dp"
-        android:layout_alignTop="@+id/nextButton"
-        android:background="@null"
-        android:src="@drawable/left_large" />
-
-    <ImageButton
-        android:id="@+id/addButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/coffeeName"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="18dp"
-        android:background="@null"
-        android:src="@drawable/plus_large" />
-
-    <TextView
-        android:id="@+id/priceView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/coffeeName"
-        android:layout_centerHorizontal="true"
-        android:text="1,70 €" />
-
 
 </RelativeLayout>
