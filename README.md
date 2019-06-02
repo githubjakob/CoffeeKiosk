@@ -11,7 +11,7 @@ The Kiosk owner get's notified through the apps push notifications and is able t
 
 | Customer      | Vendor        |
 | ------------- | ------------- |
-| <img src="https://user-images.githubusercontent.com/15627894/58765303-182ed880-8572-11e9-8d44-771e11759924.gif" data-canonical-src="https://user-images.githubusercontent.com/15627894/58765303-182ed880-8572-11e9-8d44-771e11759924.gif" width="400" height="100%" />  | <img src="https://user-images.githubusercontent.com/15627894/58765304-18c76f00-8572-11e9-8482-e6d539a40adf.gif" data-canonical-src="https://user-images.githubusercontent.com/15627894/58765304-18c76f00-8572-11e9-8482-e6d539a40adf.gif" width="400" height="100%" />  |
+| <img src="https://user-images.githubusercontent.com/15627894/58765304-18c76f00-8572-11e9-8482-e6d539a40adf.gif" data-canonical-src="https://user-images.githubusercontent.com/15627894/58765304-18c76f00-8572-11e9-8482-e6d539a40adf.gif" width="400" height="100%" /> | <img src="https://user-images.githubusercontent.com/15627894/58765303-182ed880-8572-11e9-8d44-771e11759924.gif" data-canonical-src="https://user-images.githubusercontent.com/15627894/58765303-182ed880-8572-11e9-8d44-771e11759924.gif" width="400" height="100%" />    |
 
 
 
