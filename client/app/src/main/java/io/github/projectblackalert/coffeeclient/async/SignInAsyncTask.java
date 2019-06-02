@@ -104,8 +104,6 @@ public class SignInAsyncTask extends AsyncTask<Void, Void, Void>
         final FirebaseAuth auth = FirebaseAuth.getInstance();
         FirebaseUser user = auth.getCurrentUser();
         if (user != null) {
-            //new LoginUserAsyncTask(context, new LoginDetails(user.getUid(), FirebaseInstanceId.getInstance().getToken(),
-            //        user.getEmail())).execute();
             Call<UserDetails> userDetailsCall = ApiClient.getAuthenticated().loginUser(new LoginDetails(user.getUid(), FirebaseInstanceId.getInstance().getToken(),
                     user.getEmail()));
             userDetailsCall.enqueue(new Callback<UserDetails>() {

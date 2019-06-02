@@ -1,6 +1,7 @@
 package io.github.projectblackalert.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
@@ -9,21 +10,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "User")
 public class User {
 
-    /**
-     * Das ist nicht die Unique User Id von Google,
-     * sondern eine zufällige Id, die von MongoDb vergeben und verwendet wird
-     */
     @Id
     String id;
 
     /**
-     * Das ist die Unique User Id von Google Authentication
+     * Unique User Id von Google Authentication
      */
+    @Indexed(unique=true)
     String uid;
-
-    public String getMessagingToken() {
-        return messagingToken;
-    }
 
     /**
      * Das ist das Token, das das Gerät eines Uses identifiziert
@@ -36,21 +30,21 @@ public class User {
      */
     boolean dealer;
 
-    /**
-     * Die aktuelle Position in der Warteschlange
-     * -10: User existiert nicht
-     * -5:  User existiert aber nicht in der Warteschlange
-     */
-    int position;
+    String email;
 
-    public User(String uid, String messagingToken) {
+    public User(String uid, String messagingToken, String email, boolean dealer) {
         this.uid = uid;
         this.messagingToken = messagingToken;
-        this.position = -5;
+        this.email = email;
+        this.dealer = dealer;
     }
 
     public void setDealer(boolean dealer) {
         this.dealer = dealer;
+    }
+
+    public String getMessagingToken() {
+        return messagingToken;
     }
 
     public String getUid() {
@@ -61,11 +55,19 @@ public class User {
         this.messagingToken = messagingToken;
     }
 
-    public void setPosition(int position) {
-        this.position = position;
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
-    public int getPosition() {
-        return position;
+    public boolean isDealer() {
+        return dealer;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

@@ -298,7 +298,7 @@ public class MainActivity extends AppCompatActivity
     public boolean isUserDealer() {
         SharedPreferences sharedPrefs = context.getSharedPreferences(Constants.SHARED_PREFERENCES, 0);
         boolean isDealer = sharedPrefs.getBoolean("isDealer", false);
-        Log.d("UserState", String.format("User is dealer " + isDealer));
+        Log.d("UserState", String.format("Receiving userState, isDealer " + isDealer));
         return isDealer;
     }
 

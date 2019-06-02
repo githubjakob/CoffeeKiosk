@@ -101,32 +101,21 @@ public class SecuredRestControllerImpl implements SecuredRestController {
         System.out.println(loginDto.getMessagingToken());
 
         // first check if user already exists, then update
-        List<User> userWithSameUid = userRepository.findByUid(loginDto.getUid());
+        User user = userRepository.findFirstByUid(loginDto.getUid());
 
-        if (userWithSameUid.size() == 0) {
+        if (user == null) {
             System.out.println("creating new user in db/user logged in for the first time");
-            User user = new User(loginDto.getUid(), loginDto.getMessagingToken());
-            user.setDealer(isUserDealer(loginDto.getEmail()));
-            userRepository.save(user);
+            User addedUser = new User(loginDto.getUid(), loginDto.getMessagingToken(), loginDto.getEmail(), false);
+            userRepository.save(addedUser);
+            user = addedUser;
         } else {
             System.out.println("found user with this uid in db, updating");
-            if (userWithSameUid.size() > 1) {
-                System.out.println("Es gibt mehrere user mit der gleichen uid in der db");
-            }
-
-            for (User oneUserWithSameUid : userWithSameUid ) {
-                oneUserWithSameUid.setMessagingToken(loginDto.getMessagingToken());
-                userRepository.save(oneUserWithSameUid);
-            }
+            user.setMessagingToken(loginDto.getMessagingToken());
+            userRepository.save(user);
         }
 
-        return new UserDetailsDto(loginDto.getUid(), loginDto.getMessagingToken(),
-                loginDto.getEmail(), isUserDealer(loginDto.getEmail()));
-    }
-
-    private boolean isUserDealer(String email) {
-        if (email.equals("dealer@gmail.com")) return true;
-        return false;
+        return new UserDetailsDto(user.getUid(), user.getMessagingToken(),
+                user.getEmail(), user.isDealer());
     }
 
     private void getUserDetails() {

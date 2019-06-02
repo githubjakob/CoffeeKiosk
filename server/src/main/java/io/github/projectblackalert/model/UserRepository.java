@@ -15,9 +15,5 @@ public interface UserRepository extends MongoRepository<User, String> {
 
     List<User> findByDealerTrue();
 
-    List<User> findByUid(String uid);
-
-    List<User> findByPositionGreaterThan(int Position);
-
-    int countUserByPositionGreaterThan(int position);
+    User findFirstByUid(String uid);
 }
