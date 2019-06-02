@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import io.github.projectblackalert.enums.State;
 import io.github.projectblackalert.model.Order;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -16,7 +17,8 @@ public class RestClient {
 
     private static final String GOOGLE_API_SEND = "https://fcm.googleapis.com/fcm/send";
 
-    private static final String GOOGLE_API_KEY = "AAAAep_IqGQ:APA91bFyq-cktaMcn-Lt1cxpuY_BeJo6nBwN93Xcx5CSx_wwmESW6aKiUB1qya3zHz92I5PaN-2jB4eJA94etXqL2pF1JYcGig_zfkGrutw4N89_bwaTIYwbunYcYbaX5mczpnSwQw9W";
+    // insert real key here
+    private static final String GOOGLE_API_KEY = "";
 
     public static void sendPushNotification(String target) {
         RestTemplate restTemplate = new RestTemplate();
